@@ -1,19 +1,19 @@
 import Joi from "joi";
 
 describe("joi", () => {
-  // it("should validate array", () => {
-  //   const arraySchema = Joi.array().items(
-  //     Joi.string().required().min(3).max(100)
-  //   ).min(1).unique();
+  it("should validate array", () => {
+    const arraySchema = Joi.array().items(
+      Joi.string().required().min(3).max(100)
+    ).min(1).unique();
 
-  //   const animals = ["A","ayam", "sapi", "kambing", "ayam"];
+    const animals = ["A","ayam", "sapi", "kambing", "ayam"];
 
-  //   const result = arraySchema.validate(animals, {
-  //     abortEarly: false
-  //   });
+    const result = arraySchema.validate(animals, {
+      abortEarly: false
+    });
 
-  //   console.info(result);
-  // });
+    console.info(result);
+  });
 
   //validasi array yang isinya object
   it("should validate array", () => {
